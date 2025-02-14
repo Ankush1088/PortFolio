@@ -28,9 +28,10 @@ function Home() {
             <h1>Hello, I'm a</h1>
             <ReactTyped
               className="text-green-400"
-              strings={["Full Stack Developer", "Programmer", "Coder"]}
-              typeSpeed={40}
-              backSpeed={50}
+              strings={["Full-Stack Developer", "Programmer", "Coder"]}
+              typeSpeed={80}     // Slower typing speed
+              backSpeed={50}     // Slower erasing speed
+              backDelay={1500}   // Pause before erasing
               loop
             />
           </div>
@@ -67,7 +68,9 @@ function Home() {
 
           {/* Tech Stack */}
           <div className="mt-6">
-            <h1 className="font-bold text-lg text-gray-300">Currently Working On</h1>
+            <h1 className="font-bold text-lg text-gray-300">
+              Currently Working On
+            </h1>
             <div className="grid grid-cols-4 gap-5 mt-3 text-4xl">
               <DiMongodb className="text-green-500 hover:scale-110 transition" />
               <SiExpress className="text-gray-400 hover:scale-110 transition" />
