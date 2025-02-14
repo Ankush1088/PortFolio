@@ -46,24 +46,24 @@ function Navbar() {
       {/* Background Blur Effect for md and smaller screens */}
       <div
         className={`fixed inset-0 transition-opacity duration-300 z-40 md:hidden 
-          ${menu ? "bg-black/40 backdrop-blur-md" : "opacity-0 pointer-events-none"}`}
+          ${menu ? "bg-black/40 backdrop-blur-md flex items-center justify-center" : "opacity-0 pointer-events-none"}`}
         onClick={() => setMenu(false)}
-      ></div>
-
-      {/* Mobile Navbar */}
-      <div
-        className={`fixed top-0 left-0 h-full w-2/3 bg-white shadow-lg transition-transform duration-300 z-50 md:hidden 
-          ${menu ? "translate-x-0" : "-translate-x-full"}`}
       >
-        <ul className="flex flex-col items-start space-y-6 p-6 text-lg font-semibold text-gray-700">
-          {navItems.map(({ id, text }) => (
-            <li key={id} className="hover:text-blue-600 transition-all duration-300 cursor-pointer">
-              <Link onClick={() => setMenu(false)} to={text} smooth={true} duration={500} offset={-70} activeClass="active">
-                {text}
-              </Link>
-            </li>
-          ))}
-        </ul>
+        {/* Mobile Navbar (Centered in md and smaller screens) */}
+        <div
+          className={`w-2/3 bg-white shadow-lg rounded-lg p-8 transition-transform duration-300 text-center 
+          ${menu ? "scale-100" : "scale-90 opacity-0 pointer-events-none"}`}
+        >
+          <ul className="space-y-6 text-lg font-semibold text-gray-700">
+            {navItems.map(({ id, text }) => (
+              <li key={id} className="hover:text-blue-600 transition-all duration-300 cursor-pointer">
+                <Link onClick={() => setMenu(false)} to={text} smooth={true} duration={500} offset={-70} activeClass="active">
+                  {text}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </>
   );
