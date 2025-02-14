@@ -28,7 +28,7 @@ function Home() {
             <h1>Hello, I'm a</h1>
             <ReactTyped
               className="text-green-400"
-              strings={["Full-Stack Developer", "Programmer", "Coder"]}
+              strings={["Full-stack Developer","Programmer","Coder"]}
               typeSpeed={120}    // Slower typing speed
               backSpeed={70}     // Slower erasing speed
               backDelay={2000}   // Longer pause before erasing

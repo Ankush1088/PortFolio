@@ -43,20 +43,20 @@ function Navbar() {
         </div>
       </div>
 
-      {/* Background Blur Effect for md and smaller screens */}
+      {/* Background Blur Effect for Mobile Menu */}
       <div
         className={`fixed inset-0 transition-opacity duration-300 z-40 md:hidden 
-          ${menu ? "bg-black/40 backdrop-blur-md flex items-center justify-center" : "opacity-0 pointer-events-none"}`}
+          ${menu ? "bg-gray-900/80 backdrop-blur-lg flex items-center justify-center" : "opacity-0 pointer-events-none"}`}
         onClick={() => setMenu(false)}
       >
-        {/* Mobile Navbar (Centered in md and smaller screens) */}
+        {/* Mobile Navbar (Blurred Background without White Box) */}
         <div
-          className={`w-2/3 bg-white shadow-lg rounded-lg p-8 transition-transform duration-300 text-center 
-          ${menu ? "scale-100" : "scale-90 opacity-0 pointer-events-none"}`}
+          className={`w-2/3 p-8 transition-transform duration-300 text-center 
+          ${menu ? "scale-100 text-white" : "scale-90 opacity-0 pointer-events-none"}`}
         >
-          <ul className="space-y-6 text-lg font-semibold text-gray-700">
+          <ul className="space-y-6 text-lg font-semibold">
             {navItems.map(({ id, text }) => (
-              <li key={id} className="hover:text-blue-600 transition-all duration-300 cursor-pointer">
+              <li key={id} className="hover:text-green-400 transition-all duration-300 cursor-pointer">
                 <Link onClick={() => setMenu(false)} to={text} smooth={true} duration={500} offset={-70} activeClass="active">
                   {text}
                 </Link>
