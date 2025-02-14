@@ -29,9 +29,9 @@ function Home() {
             <ReactTyped
               className="text-green-400"
               strings={["Full-Stack Developer", "Programmer", "Coder"]}
-              typeSpeed={80}     // Slower typing speed
-              backSpeed={50}     // Slower erasing speed
-              backDelay={1500}   // Pause before erasing
+              typeSpeed={120}    // Slower typing speed
+              backSpeed={70}     // Slower erasing speed
+              backDelay={2000}   // Longer pause before erasing
               loop
             />
           </div>
