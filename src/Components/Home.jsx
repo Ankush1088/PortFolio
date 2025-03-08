@@ -24,7 +24,7 @@ function Home() {
       className="max-w-screen-2xl mx-auto px-4 md:px-20 my-20 bg-gradient-to-r from-gray-900 to-gray-700 text-white rounded-lg shadow-lg py-16"
     >
       <div className="flex flex-col md:flex-row items-center gap-10">
-        {/* Left Section - Fixed Motion */}
+        {/* Left Section */}
         <motion.div
           initial={{ opacity: 0, x: -30 }}
           animate={controls}
@@ -35,12 +35,11 @@ function Home() {
             Welcome to My Feed
           </span>
 
-          {/* Separate div for Text Animation Fix */}
+          {/* Text with Animation */}
           <div className="flex justify-center md:justify-start text-4xl font-bold space-x-2">
             <h1>Hello, I'm a</h1>
-            <span className="text-green-400 w-[220px] flex-shrink-0">
+            <span className="text-green-400 min-w-[200px] inline-block">
               <ReactTyped
-                key="typed-text"
                 strings={["Full-stack Developer", "Programmer", "Coder"]}
                 typeSpeed={120}
                 backSpeed={70}
@@ -56,10 +55,10 @@ function Home() {
             high-performance web applications.
           </p>
 
-          {/* Social Media Links */}
-          <div className="flex justify-center md:justify-start space-x-5 relative z-10">
+          {/* Social Links */}
+          <div className="flex justify-center md:justify-start space-x-5">
             <motion.a
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ scale: 1.1 }}
               href="https://www.linkedin.com/in/ankush-singh-9708b2263/"
               target="_blank"
               rel="noopener noreferrer"
@@ -68,8 +67,9 @@ function Home() {
               <FaLinkedin className="text-xl" />
               <span>LinkedIn</span>
             </motion.a>
+
             <motion.a
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ scale: 1.1 }}
               href="https://github.com/Ankush1088"
               target="_blank"
               rel="noopener noreferrer"
@@ -94,7 +94,7 @@ function Home() {
           </div>
         </motion.div>
 
-        {/* Right Section - Image Fixed */}
+        {/* Right Section */}
         <motion.div
           initial={{ opacity: 0, x: 30 }}
           animate={controls}

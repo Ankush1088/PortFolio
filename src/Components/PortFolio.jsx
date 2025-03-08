@@ -17,14 +17,16 @@ function PortFolio() {
   ];
 
   return (
-    <div 
+    <div
       name="Portfolio"
       className="max-w-screen-2xl container mx-auto px-4 md:px-20 mt-10"
     >
       <div>
         <h1 className="text-4xl font-bold mb-5 text-gray-800">Portfolio</h1>
-        <span className="text-lg font-semibold text-gray-600">Featured Projects</span>
-        
+        <span className="text-lg font-semibold text-gray-600">
+          Featured Projects
+        </span>
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-6">
           {carItems.map(({ id, logo, name }) => (
             <div
@@ -43,12 +45,25 @@ function PortFolio() {
                 </p>
               </div>
               <div className="flex space-x-4 mt-5">
-                <button className="bg-blue-500 text-white px-5 py-2 rounded-lg shadow-md transition duration-300 hover:bg-blue-600 hover:scale-105">
-                  vist
-                </button>
-                <button className="bg-green-500 text-white px-5 py-2 rounded-lg shadow-md transition duration-300 hover:bg-green-600 hover:scale-105">
+                {/* ✅ "Site-Visit" ka button */}
+                <a
+                  href="https://www.linkedin.com/in/ankush-singh-9708b2263/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-blue-500 text-white px-5 py-2 rounded-lg shadow-md transition duration-300 hover:bg-blue-600 hover:scale-105 flex justify-center items-center"
+                >
+                  Site Visit
+                </a>
+
+                {/* ✅ "Source Code" ka button (GitHub link) */}
+                <a
+                  href="https://github.com/Ankush1088"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-green-500 text-white px-5 py-2 rounded-lg shadow-md transition duration-300 hover:bg-green-600 hover:scale-105 flex justify-center items-center"
+                >
                   Source Code
-                </button>
+                </a>
               </div>
             </div>
           ))}
