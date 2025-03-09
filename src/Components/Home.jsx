@@ -57,8 +57,7 @@ function Home() {
 
           {/* Social Links */}
           <div className="flex justify-center md:justify-start space-x-5">
-            <motion.a
-              whileHover={{ scale: 1.1 }}
+            <a
               href="https://www.linkedin.com/in/ankush-singh-9708b2263/"
               target="_blank"
               rel="noopener noreferrer"
@@ -66,10 +65,9 @@ function Home() {
             >
               <FaLinkedin className="text-xl" />
               <span>LinkedIn</span>
-            </motion.a>
+            </a>
 
-            <motion.a
-              whileHover={{ scale: 1.1 }}
+            <a
               href="https://github.com/Ankush1088"
               target="_blank"
               rel="noopener noreferrer"
@@ -77,7 +75,7 @@ function Home() {
             >
               <FaGithub className="text-xl" />
               <span>GitHub</span>
-            </motion.a>
+            </a>
           </div>
 
           {/* Tech Stack */}
