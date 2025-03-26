@@ -1,73 +1,91 @@
 import React from "react";
-import java from "../assets/java.png";
-import python from "../assets/python.webp";
-import mongoDB from "../assets/mongodb.jpg";
-import express from "../assets/express.png";
-import reactjs from "../assets/reactjs.png";
-import node from "../assets/node.png";
+import device from "../assets/device.png";
+import job from "../assets/job.png";
+import payment from "../assets/payment.png";
 
 function PortFolio() {
   const carItems = [
-    { id: 1, logo: mongoDB, name: "MongoDB" },
-    { id: 2, logo: express, name: "Express" },
-    { id: 3, logo: reactjs, name: "ReactJS" },
-    { id: 4, logo: node, name: "NodeJS" },
-    { id: 5, logo: python, name: "Python" },
-    { id: 6, logo: java, name: "Java" },
+    {
+      id: 1,
+      logo: device,
+      name: "Device Management",
+      link: "https://real-time-device-tracker-2-tri3.onrender.com/",
+      color: "from-blue-500 to-purple-500",
+      description: "A real-time device tracking system for efficient management."
+    },
+    {
+      id: 2,
+      logo: job,
+      name: "Job Portal",
+      link: "https://www.linkedin.com/in/ankush-singh-9708b2263/",
+      color: "from-blue-500 to-purple-500",
+      description: "A full-stack job portal connecting employers with job seekers."
+    },
+    {
+      id: 3,
+      logo: payment,
+      name: "Payment Integration",
+      link: "https://payment-getway-shop.onrender.com/",
+      color: "from-blue-500 to-purple-500",
+      description: "Secure and seamless payment gateway integration for e-commerce."
+    },
   ];
 
   return (
     <div
       name="Portfolio"
-      className="max-w-screen-2xl container mx-auto px-4 md:px-20 mt-10"
+      className="max-w-screen-2xl w-full mx-auto px-6 md:px-24 mt-12 py-12 flex flex-col items-center"
     >
-      <div>
-        <h1 className="text-4xl font-bold mb-5 text-gray-800">Portfolio</h1>
-        <span className="text-lg font-semibold text-gray-600">
+      <div className="text-center">
+        <h1 className="text-5xl font-bold mb-4 bg-gradient-to-r from-blue-500 to-purple-500 text-transparent bg-clip-text drop-shadow-lg">
           Featured Projects
+        </h1>
+        <span className="text-lg font-medium text-gray-400">
+          Showcasing My Best Work
         </span>
+      </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-6">
-          {carItems.map(({ id, logo, name }) => (
-            <div
-              key={id}
-              className="p-6 bg-white/80 shadow-lg rounded-lg backdrop-blur-lg flex flex-col items-center transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
-            >
+      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-12 mt-12 w-full">
+        {carItems.map(({ id, logo, name, link, color, description }) => (
+          <div
+            key={id}
+            className="p-10 shadow-xl rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex flex-col items-center border border-white/10"
+          >
+            <div className="flex justify-center">
               <img
                 src={logo}
                 alt={name}
-                className="w-24 h-24 object-contain mb-4"
+                className="w-96 md:w-[30rem] h-auto object-cover rounded-lg shadow-md"
               />
-              <div className="text-center">
-                <h2 className="text-2xl font-semibold text-gray-800">{name}</h2>
-                <p className="text-gray-500 text-sm mt-2 px-4">
-                  A powerful technology used in modern web development.
-                </p>
-              </div>
-              <div className="flex space-x-4 mt-5">
-                {/* ✅ "Site-Visit" ka button */}
-                <a
-                  href="https://www.linkedin.com/in/ankush-singh-9708b2263/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-blue-500 text-white px-5 py-2 rounded-lg shadow-md transition duration-300 hover:bg-blue-600 hover:scale-105 flex justify-center items-center"
-                >
-                  Site Visit
-                </a>
-
-                {/* ✅ "Source Code" ka button (GitHub link) */}
-                <a
-                  href="https://github.com/Ankush1088"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-green-500 text-white px-5 py-2 rounded-lg shadow-md transition duration-300 hover:bg-green-600 hover:scale-105 flex justify-center items-center"
-                >
-                  Source Code
-                </a>
-              </div>
             </div>
-          ))}
-        </div>
+            <h2
+              className={`text-2xl font-semibold text-center bg-gradient-to-r ${color} text-transparent bg-clip-text mt-5`}
+            >
+              {name}
+            </h2>
+            <p className="text-gray-400 text-center text-sm mt-4 px-8">
+              {description}
+            </p>
+            <div className="flex justify-center space-x-6 mt-8">
+              <a
+                href={link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border border-blue-500 text-blue-500 px-6 py-3 rounded-lg shadow-md transition duration-300 hover:bg-blue-500 hover:text-white hover:scale-105"
+              >
+                Visit Site
+              </a>
+              <a
+                href="https://github.com/Ankush1088"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border border-green-500 text-green-500 px-6 py-3 rounded-lg shadow-md transition duration-300 hover:bg-green-500 hover:text-white hover:scale-105"
+              >
+                Source Code
+              </a>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );

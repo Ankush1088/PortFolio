@@ -15,9 +15,9 @@ function Footer(){
         </div>
         <div className='mt-8 border-t border-gray-700  pt-8 items-center'>
           <p className='text-sm'>
-            &copy; 2024 your Company all Right Recived
+            &copy; 202 your Company all Right Recived
           </p>
-          <p className='text-sm mx-10'>Supportive Partner ❤️ Ankush</p>
+          <p className='text-sm mx-10'>Supportive Partner ❤️ Ankush SIngh</p>
         </div>
       </div>
      </div>

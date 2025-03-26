@@ -32,7 +32,7 @@ function Contact() {
       className="max-w-screen-2xl container mx-auto px-4 md:px-20 my-16 relative z-10"
     >
       <hr className="mb-6 border-gray-300" />
-      <h1 className="text-3xl font-bold mb-4 text-gray-800">Contact Me</h1>
+      <h1 className="text-5xl font-bold mb-4 bg-gradient-to-r from-blue-500 to-purple-500 text-transparent bg-clip-text drop-shadow-lg">Contact Me</h1>
       <span className="text-gray-600">Please fill out the form below to contact me</span>
 
       {/* Form Container */}
