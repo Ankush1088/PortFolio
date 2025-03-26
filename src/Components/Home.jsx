@@ -56,27 +56,31 @@ function Home() {
           </p>
 
           {/* Social Links */}
-          <div className="flex justify-center md:justify-start space-x-5">
-            <a
-              href="https://www.linkedin.com/in/ankush-singh-9708b2263/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-blue-500 text-white px-6 py-3 rounded-lg flex items-center space-x-2 hover:bg-blue-600 transition cursor-pointer"
-            >
-              <FaLinkedin className="text-xl" />
-              <span>LinkedIn</span>
-            </a>
+         {/* Social Links */}
+<div className="flex justify-center md:justify-start space-x-5">
+  {/* LinkedIn Button */}
+  <a
+    href="https://www.linkedin.com/in/ankush-singh-9708b2263/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="relative bg-blue-500 text-white px-6 py-3 rounded-lg flex items-center space-x-2 hover:bg-blue-600 hover:scale-105 transition cursor-pointer shadow-md"
+  >
+    <FaLinkedin className="text-xl" />
+    <span>LinkedIn</span>
+  </a>
 
-            <a
-              href="https://github.com/Ankush1088"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-gray-800 text-white px-6 py-3 rounded-lg flex items-center space-x-2 hover:bg-gray-900 transition cursor-pointer"
-            >
-              <FaGithub className="text-xl" />
-              <span>GitHub</span>
-            </a>
-          </div>
+  {/* GitHub Button */}
+  <a
+    href="https://github.com/Ankush1088"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="relative bg-gray-800 text-white px-6 py-3 rounded-lg flex items-center space-x-2 hover:bg-gray-900 hover:scale-105 transition cursor-pointer shadow-md"
+  >
+    <FaGithub className="text-xl" />
+    <span>GitHub</span>
+  </a>
+</div>
+
 
           {/* Tech Stack */}
           <div className="mt-6">
