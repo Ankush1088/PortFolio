@@ -105,7 +105,8 @@ function Home() {
         >
           <img
             src={pic}
-            className="rounded-full md:w-[350px] md:h-[350px] shadow-lg border-4 border-gray-600 hover:scale-105 transition"
+            className="w-[400px] h-[450px] object-cover rounded-3xl shadow-xl border-none hover:scale-105 transition duration-300"
+
             alt="Developer-Image"
           />
         </motion.div>
